@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dummy Album</title>
+    <link rel="stylesheet" href="Album.css" />
+</head>
+<body>
+    <header>
+        <h1>Title of Dummy Album</h1>
+        <img src="images/album.jpg" class="album-art" alt="album cover" title="album cover"/>
+        <p><strong>Artist: </strong><a href="#">artist name</a></p> <!--links to artist's page-->
+    </header>
+    <main>
+        <section id="tracks">
+            <h2>Tracks</h2>
+            <ol>
+                <li>Track 1</li>
+                <li>Track 2</li>
+                <li>Track 3</li>
+                <li>Track 4</li>
+                <li>Track 5</li>
+            </ol>
+            <!--if we do pages for tracks, make these links-->
+        </section>
+        <section id="album-releases">
+            <h2>Album Releases</h2>
+            <table>
+                <tr>
+                    <th>Release Name</th>
+                    <th>Resease Date</th>
+                    <th>Format</th>
+                    <th>Number of Tracks</th>
+                    <th>Country</th>
+                    <th>Label</th>
+                </tr>
+                <tr>
+                    <td>name of release</td>
+                    <td>date of release</td>
+                    <td>format of release</td>
+                    <td>number of tracks</td>
+                    <td>country of release</td>
+                    <td>label of release</td>
+                </tr>
+                <tr>
+                    <td>name of next release</td>
+                    <td>date of next release</td>
+                    <td>format of next release</td>
+                    <td>number of next tracks</td>
+                    <td>country of next release</td>
+                    <td>label of next release</td>
+                </tr>
+            </table>
+            <!--make things into links to their relative pages as relevant-->
+        </section>
+        <section id="genre-tags">
+            <h2>Genre Tags</h2>
+            <ul>
+                <li><a href="#">genre1</a></li>
+                <li><a href="#">genre2</a></li>
+                <li><a href="#">genre3</a></li>
+                <!--links to genre pages, if we decide to do those-->
+            </ul>
+        </section>
+        <section id="similar-albums">
+            <h2>Similar Albums</h2>
+            <p>
+                <a href="#">
+                    <figure>
+                        <img src="images/album.jpg" class="album-art" alt="album cover" title="album cover"/>
+                        <figcaption>Similar Album 1</figcaption>
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <img src="images/album.jpg" class="album-art" alt="album cover" title="album cover"/>
+                        <figcaption>Similar Album 2</figcaption>
+                    </figure>
+                </a>
+                <a href="#">
+                    <figure>
+                        <img src="images/album.jpg" class="album-art" alt="album cover" title="album cover"/>
+                        <figcaption>Similar Album 3</figcaption>
+                    </figure>
+                </a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>All music data comes from the <a href="https://musicbrainz.org">MusicBrainz</a> database</p>
+    </footer>
+</body>
+</html>
