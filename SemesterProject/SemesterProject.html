@@ -14,26 +14,45 @@
             <a href="#artists">Similar Artists</a>
         </nav>
     <section>
-        <p>Insert Artist Name here</p>
+        <h1>Artist's Name</h1>
         <img src="images/apple-clip-art.jpg" alt = "placeholder" title = "placeholder" id = artistPhoto>
     </section>
     <section>
+        <h2>Basic Artist Information</h2>
         <p>This will be a paragraph giving basic information about the artist that this page is dedicated to.</p>
         <p id = birthdate>Birthdate: </p>
         <p>Deathdate: if applicable</p>
     </section>
     <section>
+        <h2>Genre</h2>
         <p id = genre>Genre:</p>
     </section>
         <nav id = songNav>
+            <h2>Songs</h2>
             <p id = songs>This section will eventually list some of their most popular songs, with links to their individual pages</p>
-            <ol>
-                <li><a href="#">song</a></li>
-                <li><a href="#">song</a></li>
-                <li><a href="#">song</a></li>
-            </ol>
+            <table>
+                <th>Top Songs</th>
+                <th>Song release date:</th>
+                <th>Song length:</th>
+                <tr>
+                    <td><a href="#">Song Name:</a></td>
+                    <td>Song release date:</td>
+                    <td>Song length:</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Song Name:</a></td>
+                    <td>Song release date:</td>
+                    <td>Song length:</td>
+                </tr>
+                <tr>
+                    <td><a href="#">Song Name:</a></td>
+                    <td>Song release date:</td>
+                    <td>Song length:</td>
+                </tr>
+            </table>
         </nav>
     <section>
+        <h2>Other similar artists</h2>
         <p id = artists>Other similar artists:</p>
         <ol>
             <li><a href="#">Artist</a></li>
@@ -44,5 +63,8 @@
             <li><a href="#">Artist</a></li>
         </ol>
     </section>
+    <footer>
+            <p>All music data comes from the <a href="https://musicbrainz.org">MusicBrainz</a> database</p>
+    </footer>
     </main>
 </body>
