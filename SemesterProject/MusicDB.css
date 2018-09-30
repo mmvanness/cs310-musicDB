@@ -2,6 +2,12 @@ body {
     background-color: rgb(48, 48, 170);
 }
 
+body #linkBox { /*This css is used for a link box at the top of the Artist and Genre page */
+    background-color: rgb(105, 102, 102);
+    padding: 10px;
+    text-align: left;
+}
+
 a {
     color: rgb(45, 241, 78);
     text-decoration: none;
