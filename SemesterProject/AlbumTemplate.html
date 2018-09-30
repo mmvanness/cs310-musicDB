@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="Album.css" />
 </head>
 <body>
-    <header>
-        <h1>Title of Dummy Album</h1>
-        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover"/>
-        <p><strong>Artist: </strong><a href="#">artist name</a></p> <!--links to artist's page-->
-    </header>
+    <!--<header></header>-->
     <main>
+        <section id="intro">
+                <h1>Title of Dummy Album</h1>
+                <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover"/>
+                <p><strong>Artist: </strong><a href="#">artist name</a></p> <!--links to artist's page-->
+        </section>
         <section id="tracks">
             <h2>Tracks</h2>
             <ol>
@@ -66,7 +67,7 @@
         <section id="similar-albums">
             <h2>Similar Albums</h2>
             <p>
-                <a href="#">
+                <a href="#"> <!--link these to their own album pages-->
                     <figure>
                         <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover"/>
                         <figcaption>Similar Album 1</figcaption>
