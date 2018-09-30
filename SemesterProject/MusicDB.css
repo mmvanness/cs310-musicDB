@@ -19,6 +19,11 @@ table, th, td {
     padding: 5px;
 }
 
+.main-image {
+    max-width: 12em;
+    border: 3px solid rgb(199, 199, 199);
+}
+
 h1, h2 {
     background-color: rgb(199, 199, 199);
     padding: 5px 15px;
