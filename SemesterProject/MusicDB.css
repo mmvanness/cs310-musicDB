@@ -11,6 +11,13 @@ a:visited {
     text-decoration: none;
 }
 
+.green {
+    color: rgb(64, 148, 51);
+}
+.right {
+    text-align: right;
+}
+
 table {
     border-collapse: collapse;
 }
@@ -38,9 +45,6 @@ header, main section, main nav {
     padding: 20px;
     margin: 20px;
     
-}
-header {
-    text-align: center;
 }
 footer {
     padding: 5px 60px;
