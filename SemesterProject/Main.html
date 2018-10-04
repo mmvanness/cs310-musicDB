@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>MusicDB</title>
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Album.css" />
+    <script src="js/headFoot.js" type="text/JavaScript"></script>
 </head>
+
 <body>
     <header>
-        <h1>Music<span class="green">DB</span></h1>
-        <p id="search">
-            <form class="right">
-                <select>
-                    <option value="artist">Artist</option>
-                    <option value="album">Album</option>
-                    <option value="genre">Genre</option>
-                </select>
-                <input type="text" name="searcn" placeholder="Search" />
-                <input type="submit" vlaue="Search" />
-                <a href="#">Advanced Search</a> <!--link to search page-->
-            </form>
-        </p>
+        <script>makeHeader();</script>
     </header>
     <main>
         <section id="welcome">
             <h2>Welcome to MusicDB!</h2>
             <p>
-                This is a database of music metadata that is pulled from the <a href="https://musicbrainz.org">MusicBrainz</a> online database.
+                This is a database of music metadata that is pulled from the <a href="https://musicbrainz.org">MusicBrainz</a>
+                online database.
                 We are very grateful for their data.
                 Our mission is to present thier information in a friendly, navigable manner.
                 We hope you enjoy your visit!
@@ -46,4 +38,5 @@
         <p>All music data comes from the <a href="https://musicbrainz.org">MusicBrainz</a> database</p>
     </footer>
 </body>
+
 </html>
