@@ -16,6 +16,16 @@ function makeHeader() {
   document.write(headerBanner);
 }
 
+function makeFooter() {
+  let footer =
+    "<p>All music data comes from the " +
+    aTag("MusicBrainz", "https://musicbrainz.org") +
+    " database</p>";
+  document.write(footer);
+}
+
+/*tagging functions*/
+
 function h1Tag(content) {
   return "<h1>" + content + "</h1>";
 }
