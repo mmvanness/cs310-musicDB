@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="utf-8">
-   <title>General Artist Page</title>
-   <link rel="stylesheet" href="css/MusicDB.css" />
-   <link rel="stylesheet" href="css/Artist.css" />
+    <meta charset="utf-8">
+    <title>General Artist Page</title>
+    <link rel="stylesheet" href="css/MusicDB.css" />
+    <link rel="stylesheet" href="css/Artist.css" />
+    <script src="js/headFoot.js" type="text/JavaScript"></script>
 </head>
+
 <body>
-    <nav id = linkBox>
-        <a href="#birthdate">Birthdate</a>&nbsp;
-        <a href="#genre">Genre</a>&nbsp;
-        <a href="#songs">Similar Songs</a>&nbsp;
-        <a href="#artists">Similar Artists</a>
-    </nav>
     <header>
-        <h1>Artist's Name</h1>
-        <img src="images/apple-clip-art.jpg" alt = "placeholder" title = "placeholder" class = main-image>
+        <script>makeHeader();</script>
     </header>
     <main>
-    <section>
-        <h2>Basic Artist Information</h2>
-        <p>This will be a paragraph giving basic information about the artist that this page is dedicated to.</p>
-        <p id = birthdate>Birthdate: </p>
-        <p>Deathdate: if applicable</p>
-    </section>
-    <section>
-        <h2>Genre</h2>
-        <p id = genre>Genre:</p>
-    </section>
-        <nav id = songNav>
+        <section>
+            <h1>Artist's Name</h1>
+            <img src="images/apple-clip-art.jpg" alt="placeholder" title="placeholder" class=main-image>
+        </section>
+        <nav id=linkBox>
+            <a href="#birthdate">Birthdate</a>&nbsp;
+            <a href="#genre">Genre</a>&nbsp;
+            <a href="#songs">Similar Songs</a>&nbsp;
+            <a href="#artists">Similar Artists</a>
+        </nav>
+        <section>
+            <h2>Basic Artist Information</h2>
+            <p>This will be a paragraph giving basic information about the artist that this page is dedicated to.</p>
+            <p id=birthdate>Birthdate: </p>
+            <p>Deathdate: if applicable</p>
+        </section>
+        <section>
+            <h2>Genre</h2>
+            <p id=genre>Genre:</p>
+        </section>
+        <nav id=songNav>
             <h2>Songs</h2>
-            <p id = songs>This section will eventually list some of their most popular songs, with links to their individual pages</p>
+            <p id=songs>This section will eventually list some of their most popular songs, with links to their
+                individual pages</p>
             <table>
                 <tr>
                     <th>Top Songs</th>
@@ -54,20 +61,20 @@
                 </tr>
             </table>
         </nav>
-    <section>
-        <h2>Other similar artists</h2>
-        <p id = artists>Other similar artists:</p>
-        <ol>
-            <li><a href="#">Artist</a></li>
-            <li><a href="#">Artist</a></li>
-            <li><a href="#">Artist</a></li>
-            <li><a href="#">Artist</a></li>
-            <li><a href="#">Artist</a></li>
-            <li><a href="#">Artist</a></li>
-        </ol>
-    </section>
-    <footer>
-            <p>All music data comes from the <a href="https://musicbrainz.org">MusicBrainz</a> database</p>
-    </footer>
+        <section>
+            <h2>Other similar artists</h2>
+            <p id=artists>Other similar artists:</p>
+            <ol>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Artist</a></li>
+            </ol>
+        </section>
+        <footer>
+            <script>makeFooter();</script>
+        </footer>
     </main>
 </body>
