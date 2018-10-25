@@ -8,7 +8,7 @@ function makeHeader() {
   }
   searchForm = selectTag(searchForm);
   searchForm += '<input type="text" name="search" placeholder="Search" />';
-  searchForm += '<input type="submit" vlaue="Search" />';
+  searchForm += '<input type="submit" value="Search" />';
   searchForm += aTag("Advanced Search", "#");
   searchForm = formTag(searchForm, "right");
   searchForm = pTag(searchForm, "search");
