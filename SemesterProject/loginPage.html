@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <title>MusicDB</title>
     <link rel="stylesheet" href="css/MusicDB.css" />
-    <link rel="stylesheet" href="css/Album.css" />
+    <link rel="stylesheet" href="css/loginPage.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
+    <script src="js/loginPage.js" type="text/JavaScript"></script>
 </head>
 
 <body>
@@ -19,13 +20,13 @@
             <p>
                 Enter the fields below to create an account!
             </p>
-            <form>
+            <form id="mainForm">
                 <input type="text" name="username" placeholder="Username:"/><br>
                 <p></p>
-                <input type="password" name="password" placeholder="Password:"/><br>
-                <input type="password" name="confirmPassword" placeholder="Confirm Password:"/><br>
+                <input type="password" name="password" placeholder="Password:" class="required"/><br>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password:" class="required"/><br>
                 <p></p>
-                <input type="text" name="username" placeholder="Email:"/><br>
+                <input type="text" name="username" placeholder="Email:" class="required"/><br>
             </form>
             <p>
                 <input type="submit">
