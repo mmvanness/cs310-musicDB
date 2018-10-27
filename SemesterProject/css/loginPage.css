@@ -4,3 +4,7 @@
 .remove {
     background-color: white;
 }
+#small {
+    font-size: small;
+    color: red;
+}
