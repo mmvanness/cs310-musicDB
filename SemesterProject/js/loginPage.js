@@ -1,20 +1,24 @@
 window.addEventListener("load", function() {
     var form = document.querySelector("#mainForm");
-    form.addEventListener("submit", function() {
-        alert("hello5");
+    form.addEventListener("submit", function(e) {
         var requiredFields = document.querySelectorAll('.required');
-        this.alert("hello1");
+        var requiredFieldsList = [];
         for(i = 0; i < requiredFields.length; i++)
         {
-            alert("hello");
             if (requiredFields[i].value == null || requiredFields[i].value == "")
             {   
                 e.preventDefault();
                 requiredFields[i].classList.add("error");
+                requiredFieldsList.push(requiredFields[i]);
+
             }
             else {
                 requiredFields[i].classList.remove("error");
             }
         }
+        if (requiredFieldsList.size != 0)
+            {
+                alert("You have left at least one required field empty.")
+            }
     });
 });
