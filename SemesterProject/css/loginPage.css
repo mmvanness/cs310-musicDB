@@ -2,6 +2,7 @@
 .remove {
     background-color: white;
 }
+<<<<<<< HEAD
 .error {
     background-color: rgb(255, 0, 0);
 
@@ -11,3 +12,9 @@
     font-size: small;
     color: red;
 }
+=======
+#small {
+    font-size: small;
+    color: red;
+}
+>>>>>>> 3a15bf9f3bd5c02e41319dfd3f9eac79cc2e7961
