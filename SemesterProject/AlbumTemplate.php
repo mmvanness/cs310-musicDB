@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Album.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
+    <?php include('albumInfo.php'); ?>
 </head>
 
 <body>
@@ -23,11 +24,10 @@
         <section id="tracks">
             <h2>Tracks</h2>
             <ol>
-                <li>Track 1</li>
-                <li>Track 2</li>
-                <li>Track 3</li>
-                <li>Track 4</li>
-                <li>Track 5</li>
+                <?php 
+                foreach($tracks as $track)
+                echo("<li>$track</li>");
+                ?>
             </ol>
             <!--if we do pages for tracks, make these links-->
         </section>
