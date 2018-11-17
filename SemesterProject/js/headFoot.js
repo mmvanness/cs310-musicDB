@@ -1,5 +1,6 @@
 function makeHeader() {
-  let title = "Music" + spanTag("DB", "green");
+  let title = spanTag("Music", "black") + spanTag("DB", "green");
+  title = aTag(title, "Main.html");
   title = h1Tag(title);
   let searchForm = "";
   let searchOptions = ["Artist", "Album", "Genre"];
@@ -12,7 +13,9 @@ function makeHeader() {
   searchForm += aTag("Advanced Search", "#");
   searchForm = formTag(searchForm, "right");
   searchForm = pTag(searchForm, "search");
-  headerBanner = title + searchForm;
+  let loginLink = aTag("Login", "loginPage.html");
+  loginLink = "<p class=" + "right" + ">" + loginLink + "</p>";
+  headerBanner = title + searchForm + loginLink;
   document.write(headerBanner);
 }
 
