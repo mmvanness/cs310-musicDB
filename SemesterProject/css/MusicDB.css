@@ -21,6 +21,9 @@ a:visited {
 .green {
   color: rgb(64, 148, 51);
 }
+.black {
+  color: black;
+}
 .right {
   text-align: right;
 }
