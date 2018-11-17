@@ -10,15 +10,16 @@ window.addEventListener("load", function() {
                 e.preventDefault();
                 requiredFields[i].classList.add("error");
                 requiredFieldsList.push(requiredFields[i]);
+                
 
             }
             else {
                 requiredFields[i].classList.remove("error");
             }
         }
-        if (requiredFieldsList.size != 0)
-            {
-                alert("You have left at least one required field empty.")
-            }
+        if (requiredFieldsList.length != 0)
+        {
+            alert("You have left at least one required field empty.")
+        }
     });
 });
