@@ -21,9 +21,11 @@
                 online database.
                 We are very grateful for their data.
                 Our mission is to present their information in a friendly, navigable manner.
-                We hope you enjoy your visit!
+                We hope you enjoy your visit!<br></p>
+
+            <p>Click <a href="loginPage.php">HERE</a> to login!</p>
                 <!--this is just filler text for now, should beef it up later-->
-            </p>
+            
         </section>
         <section id="about">
             <h2>About Us</h2>

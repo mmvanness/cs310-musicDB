@@ -20,7 +20,7 @@
             <p>
                 Enter the fields below to login!
             </p>
-            <form method="get" action="" id="mainForm">
+            <form method="POST" action="" id="mainForm">
                 <p>*Username:</p>
                 <input type="text" class="required" name="username"/><br>
                 <p></p>
@@ -29,6 +29,17 @@
                 <p></p>
                 <p id="small">If field is marked with an asterisk, field is required.</p>
                 <p>If you do not have an account, click <a href="createAccount.html">HERE</a> to create one!</p>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST")
+                {
+                    if (($_POST["username"] == "Tommy") && ( $_POST["password"] == "Simmons") ) {
+                        header('Location: userHomePage.php');
+                    }
+                    else {
+                        echo("Username or Password was incorrect.");
+                    }
+                }
+                ?>
             <p>
                 <input type="submit">
             </p>

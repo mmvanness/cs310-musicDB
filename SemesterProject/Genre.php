@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Genre.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
+    <?php include('php/genreInfo.php')?>
 </head>
 
 <body>
@@ -34,41 +35,38 @@
                 individual pages</p>
             <table>
                 <tr>
-                    <th>Artist Name:</th>
-                    <th>Top Songs:</th>
-                    <th>Song release date:</th>
-                    <th>Song length:</th>
+                    <th>Artist Name: </th>
+                    <th>Top Songs: </th>
+                    <th>Song release date: </th>
+                    <th>Song length: </th>
                 </tr>
-                <tr>
-                    <td>Artist Name:</td>
-                    <td><a href="#">Song Name:</a></td>
-                    <td>Song release date:</td>
-                    <td>Song length:</td>
-                </tr>
-                <tr>
-                    <td>Artist Name:</td>
-                    <td><a href="#">Song Name:</a></td>
-                    <td>Song release date:</td>
-                    <td>Song length:</td>
-                </tr>
-                <tr>
-                    <td>Artist Name:</td>
-                    <td><a href="#">Song Name:</a></td>
-                    <td>Song release date:</td>
-                    <td>Song length:</td>
-                </tr>
+                <?php
+                foreach($majorArtists as $artists)
+                {
+                    $artistName = $majorArtists[0];
+                    $songName = $majorArtists[1];
+                    $songReleaseDate = $majorArtists[2];
+                    $songLength = $majorArtists[3];
+                    echo("<tr>");
+                        echo("<td>$artistName</td>");
+                        echo("<td><a href='#'>$songName</a></td>");
+                        echo("<td>$songReleaseDate</td>");
+                        echo("<td>$songLength</td>");
+                    echo("</tr>");
+                }
+                ?>
             </table>
         </nav>
         <section>
             <h2>Other similar genres</h2>
             <p id=artists>Other similar genres:</p>
             <ol>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Genre</a></li>
-                <li><a href="#">Genre</a></li>
+                <?php
+                foreach($similarGenres as $genre)
+                {
+                   echo("<li><a href='#'>$genre</a></li>");
+                }
+                ?>
             </ol>
         </section>
         <footer>
