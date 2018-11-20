@@ -25,7 +25,7 @@
        <?php
        foreach($searchResults as $search)
        {
-           echo("<p class='search'>$search</p><br>");
+           echo("<p class=\"search\">$search</p><br>");
        }
 
 
