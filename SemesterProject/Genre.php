@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Genre.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
-    <?php include('php/genreInfo.php')?>
+    <?php include 'php/genreInfo.php'; ?>
 </head>
 
 <body>
@@ -16,7 +16,10 @@
     </header>
     <main>
         <section>
-            <h1>Genre X</h1>
+            <h1>
+                Genre X<br />
+                <button type="button" id="fav">Favorite &#10084;</button>
+            </h1>
         </section>
         <nav id=linkBox>
             <a href="#basicInfo">Information</a>&nbsp;

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Artist.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
-    <?php include('php/artistInfo.php'); ?>
+    <?php include 'php/artistInfo.php'; ?>
 </head>
 
 <body>
@@ -16,7 +16,10 @@
     </header>
     <main>
         <section>
-            <h1>Artist's Name</h1>
+            <h1>
+                Artist's Name</br>
+                <button type="button" id="fav">Favorite &#10084;</button>
+            </h1>
             <img src="images/apple-clip-art.jpg" alt="placeholder" title="placeholder" class=main-image>
         </section>
         <nav id=linkBox>

@@ -28,6 +28,10 @@ a:visited {
   text-align: right;
 }
 
+/*#fav {
+  float: right;
+}*/
+
 table {
   border-collapse: collapse;
 }
