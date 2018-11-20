@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <script>makeHeader(); </script>
+        <script>makeHeader();</script>
     </header>
     <main>
         <section id="welcome">

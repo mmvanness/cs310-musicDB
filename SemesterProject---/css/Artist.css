@@ -1,0 +1,24 @@
+body main section, body main nav {
+    text-align: center;
+}
+
+body #linkBox {
+    background-color: rgb(105, 102, 102);
+    padding: 10px;
+    text-align: left;
+}
+
+body p, {
+    text-align: center;
+}
+
+
+body main nav ol, body section ol {
+    text-align: center;
+    list-style-position: inside;
+}
+
+table, table td {
+    margin-left: auto;
+    margin-right: auto;
+}

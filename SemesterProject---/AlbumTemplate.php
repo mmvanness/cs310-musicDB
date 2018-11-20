@@ -16,7 +16,10 @@
     </header>
     <main>
         <section id="intro">
-            <h1>Title of Dummy Album</h1>
+            <h1>
+                Title of Dummy Album<br />
+                <button type="button" id="fav">Favorite &#10084;</button>
+            </h1>
             <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
             <p><strong>Artist: </strong><a href="#">artist name</a></p>
             <!--links to artist's page-->

@@ -1,0 +1,8 @@
+.search {
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  border-color: rgb(48, 48, 170);
+  border-width: 5px;
+  border-style: ridge;
+  margin: 0.25em;
+  padding: 0.5em;
+}

@@ -19,12 +19,13 @@
         
 
        <section>
-       <p>Here you can find all search results for your search query "Drake".We've found 8 matching results.</p><br>
+       <p>Here you can find all search results for your search query "Drake".We've found 8 matching results.</p>		
+       <br>
 
        <?php
        foreach($searchResults as $search)
        {
-           echo("<p class='search'>$search</p><br>");
+           echo("<p class=\"search\">$search</p><br>");
        }
 
 
