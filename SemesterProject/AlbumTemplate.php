@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Album.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
-    <?php include('albumInfo.php'); ?>
+    <?php include('php/albumInfo.php'); ?>
 </head>
 
 <body>
@@ -35,28 +35,28 @@
             <h2>Album Releases</h2>
             <table>
                 <tr>
-                    <th>Release Name</th>
-                    <th>Resease Date</th>
-                    <th>Format</th>
-                    <th>Number of Tracks</th>
-                    <th>Country</th>
-                    <th>Label</th>
+                    <?php 
+                    foreach($releaseDateHeader as $header)
+                    {
+                        echo("<th>$header</th>");
+                    }
+                    ?>
                 </tr>
                 <tr>
-                    <td>name of release</td>
-                    <td>date of release</td>
-                    <td>format of release</td>
-                    <td>number of tracks</td>
-                    <td>country of release</td>
-                    <td>label of release</td>
+                    <?php
+                    foreach($releaseDate as $release)
+                    {
+                        echo("<td>$release</td>");
+                    }
+                    ?>
                 </tr>
                 <tr>
-                    <td>name of next release</td>
-                    <td>date of next release</td>
-                    <td>format of next release</td>
-                    <td>number of next tracks</td>
-                    <td>country of next release</td>
-                    <td>label of next release</td>
+                    <?php
+                    foreach($nextReleaseDate as $nextRelease)
+                    {
+                        echo("<td>$nextRelease</td>");
+                    }
+                    ?>
                 </tr>
             </table>
             <!--make things into links to their relative pages as relevant-->
@@ -64,76 +64,30 @@
         <section id="genre-tags">
             <h2>Genre Tags</h2>
             <ul>
-                <li><a href="#">genre1</a></li>
-                <li><a href="#">genre2</a></li>
-                <li><a href="#">genre3</a></li>
+                <?php 
+                foreach($genres as $genre)
+                {
+                    echo("<li><a href='#'>$genre</a></li>");
+                }
+                ?>
                 <!--links to genre pages, if we decide to do those-->
             </ul>
         </section>
         <section id="similar-albums">
             <h2>Similar Albums</h2>
             <p>
-                <a href="#">
-                    <!--link these to their own album pages-->
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 1</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 2</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 3</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 4</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 5</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 6</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 7</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 8</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 9</figcaption>
-                    </figure>
-                </a>
-                <a href="#">
-                    <figure>
-                        <img src="images/album.jpg" class="main-image" alt="album cover" title="album cover" />
-                        <figcaption>Similar Album 10</figcaption>
-                    </figure>
-                </a>
+                <!--link these to their own album pages-->
+                <?php
+                foreach($albums as $album)
+                {
+                    echo("<a href='#'>");
+                        echo("<figure>");
+                            echo("<img src='images/album.jpg' class='main-image' alt='album cover' title='album cover' />");
+                            echo("<figcaption>$album</figcaption>");
+                        echo("</figure>");
+                    echo("</a>");
+                }
+                ?>
             </p>
         </section>
     </main>
