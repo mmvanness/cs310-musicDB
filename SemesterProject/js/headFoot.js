@@ -14,7 +14,7 @@ function makeHeader() {
   searchForm = formTag(searchForm, "right");
   searchForm = pTag(searchForm, "search");
   let loginLink = aTag("Login", "loginPage.html");
-  loginLink = "<p class=" + "right" + ">" + loginLink + "</p>";
+  loginLink = '<p class="right">' + loginLink + "</p>";
   headerBanner = title + searchForm + loginLink;
   document.write(headerBanner);
 }
