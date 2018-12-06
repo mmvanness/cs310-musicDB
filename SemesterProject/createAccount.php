@@ -28,44 +28,36 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         <section id="welcome">
             <h2>Welcome to MusicDB!</h2>
             <p>
-                Enter the fields below to login!
+                Enter the fields below to create an account!
             </p>
-            <form method="POST" action="" id="mainForm">
+            <form method="get" action="" id="mainForm">
                 <p>*Username:</p>
                 <input type="text" class="required" name="username"/><br>
                 <p></p>
                 <p>*Password:</p>
                 <input type="password" class="required" name="password"/><br>
+                <p>*Confirm Password:</p>
+                <input type="password" class="required" name="confirmPassword"/><br>
                 <p></p>
                 <p id="small">If field is marked with an asterisk, field is required.</p>
-                <p>If you do not have an account, click <a href="createAccount.html">HERE</a> to create one!</p>
                 <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST")
-                {
-                    if ( isset(($_POST["username"])) && ( isset($_POST["password"]) )) 
+                    if ($_SERVER["REQUEST_METHOD"] == "POST")
+                    {
+                        if ( isset(($_POST["username"])) && ( isset($_POST["password"]) )) 
                         {
                             $Username = $_POST["username"];
                             $Password = $_POST["password"];
 
                             try {
-                                $sql = "SELECT password FROM users WHERE username = '" . "$Username" . "'";
+                                $sql = "INSERT INTO users (username, password) VALUES (" . "$Username" . ", " . "$Password" . ")";
                                 $result = $pdo->exec($sql);
-                                if ($result == $Password && $result == $Username)
-                                {
-                                   header('Location: userHomePage.php'); 
-                                }
-                                else{
-                                    echo("Username or Password was incorrect.");
-                                }
-                                
-                                
+        
                             }
                             catch (PDOException $e) {
                                 die( $e->getMessage() );
                             }
                         }
-                }
-
+                    }
                 ?>
             <p>
                 <input type="submit">
