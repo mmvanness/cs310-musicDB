@@ -1,3 +1,13 @@
+<?php
+$connString = "mysql:host=localhost;dbname=mdb_data";
+$user = "cs310";
+$pass = "cs310";
+
+$pdo = new PDO($connString,$user,$pass);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,9 +1,19 @@
+<?php
+$connString = "mysql:host=localhost;dbname=mdb_data";
+$user = "cs310";
+$pass = "cs310";
+
+$pdo = new PDO($connString,$user,$pass);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Dummy Album</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="css/MusicDB.css" />
     <link rel="stylesheet" href="css/Album.css" />
     <script src="js/headFoot.js" type="text/JavaScript"></script>
@@ -53,15 +63,31 @@
             <h2>Recently searched albums</h2>
             <p>
                 <!--link these to their own album pages-->
+                
                 <?php
-                for ($i = 0; $i < 4; $i++)
-                {
-                    echo("<a href='#'>");
-                        echo("<figure>");
-                            echo("<a href='AlbumTemplate.php'><img src='images/album.jpg' class='main-image' alt='album cover' title='album cover' /></a>");
-                        echo("</figure>");
-                    echo("</a>");
+                try {
+                        $sql = "SELECT DISTINCT Artists FROM ArtistData";
+                        $result = $pdo->query($sql);
+                        while($row = $result->fetch())
+                        {
+                            for ($i = 0; $i < COUNT($result); $i++)
+                            {
+                                $ArtistName = $row["Artists"];
+                                echo("<figure>");
+                                    echo("<a href='AlbumTemplate.php/artist=$ArtistName'><img src='images/album.jpg' class='main-image' alt='album cover' title='album cover' /></a>");                  
+                                    echo("<p>$ArtistName</p>");                  
+                                    echo("</figure>");
+                                echo("</a>");
+
+                            }
+                        }
+                        
                 }
+                catch (PDOException $e) {
+                    die( $e->getMessage() );
+                }
+                        
+
                 ?>
             </p>
         </section>

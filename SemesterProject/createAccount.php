@@ -30,7 +30,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             <p>
                 Enter the fields below to create an account!
             </p>
-            <form method="get" action="" id="mainForm">
+            <form method="POST" action="" id="mainForm">
                 <p>*Username:</p>
                 <input type="text" class="required" name="username"/><br>
                 <p></p>
@@ -41,6 +41,14 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 <p></p>
                 <p id="small">If field is marked with an asterisk, field is required.</p>
                 <?php
+                $Username = $_POST["username"];
+                $Password = $_POST["password"];
+                $ConfirmPassword = $_POST["confirmPassword"];
+                if ($Password != $ConfirmPassword)
+                {
+                    echo("The two password fields do not match.");
+                }
+                else {
                     if ($_SERVER["REQUEST_METHOD"] == "POST")
                     {
                         if ( isset(($_POST["username"])) && ( isset($_POST["password"]) )) 
@@ -49,7 +57,7 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             $Password = $_POST["password"];
 
                             try {
-                                $sql = "INSERT INTO users (username, password) VALUES (" . "$Username" . ", " . "$Password" . ")";
+                                $sql = "INSERT INTO users (username, pass) VALUES ('$Username', '$Password')";
                                 $result = $pdo->exec($sql);
         
                             }
@@ -58,6 +66,8 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             }
                         }
                     }
+                }
+                    
                 ?>
             <p>
                 <input type="submit">
