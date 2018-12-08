@@ -35,30 +35,31 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 <input type="text" class="required" name="username"/><br>
                 <p></p>
                 <p>*Password:</p>
-                <input type="password" class="required" name="password"/><br>
+                <input type="password" class="required" name="pass"/><br>
                 <p></p>
                 <p id="small">If field is marked with an asterisk, field is required.</p>
                 <p>If you do not have an account, click <a href="createAccount.html">HERE</a> to create one!</p>
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST")
                 {
-                    if ( isset(($_POST["username"])) && ( isset($_POST["password"]) )) 
+                    if ( isset(($_POST["username"])) && ( isset($_POST["pass"]) )) 
                         {
                             $Username = $_POST["username"];
-                            $Password = $_POST["password"];
+                            $Password = $_POST["pass"];
 
                             try {
-                                $sql = "SELECT password FROM users WHERE username = '" . "$Username" . "'";
-                                $result = $pdo->exec($sql);
-                                if ($result == $Password && $result == $Username)
+                                $sql = "SELECT pass FROM users WHERE username = '" . "$Username" . "'";
+                                $result = $pdo->query($sql);
+                                $row = $result->fetch();
+                                $pass = $row['pass'];
+                                if ($pass == $Password)
                                 {
+                                    echo("confirmed user");
                                    header('Location: userHomePage.php'); 
                                 }
                                 else{
                                     echo("Username or Password was incorrect.");
                                 }
-                                
-                                
                             }
                             catch (PDOException $e) {
                                 die( $e->getMessage() );
