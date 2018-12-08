@@ -41,24 +41,23 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 <p></p>
                 <p id="small">If field is marked with an asterisk, field is required.</p>
                 <?php
-                $Username = $_POST["username"];
-                $Password = $_POST["password"];
-                $ConfirmPassword = $_POST["confirmPassword"];
-                if ($Password != $ConfirmPassword)
-                {
-                    echo("The two password fields do not match.");
-                }
-                else {
+            
                     if ($_SERVER["REQUEST_METHOD"] == "POST")
                     {
-                        if ( isset(($_POST["username"])) && ( isset($_POST["password"]) )) 
+                        $Username = $_POST["username"];
+                        $Password = $_POST["password"];
+                        $ConfirmPassword = $_POST["confirmPassword"];
+                        if ($Password != $ConfirmPassword)
                         {
-                            $Username = $_POST["username"];
-                            $Password = $_POST["password"];
+                            echo("The two password fields do not match.");
+                        }
 
+                        else
+                        {
                             try {
                                 $sql = "INSERT INTO users (username, pass) VALUES ('$Username', '$Password')";
                                 $result = $pdo->exec($sql);
+                                header('Location: userHomePage.php'); 
         
                             }
                             catch (PDOException $e) {
@@ -66,7 +65,6 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             }
                         }
                     }
-                }
                     
                 ?>
             <p>
